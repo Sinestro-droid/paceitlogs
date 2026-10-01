@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #f0f5fb;
+  --color-brand-100: #dce8f5;
+  --color-brand-200: #b9d0ea;
+  --color-brand-300: #8db1da;
+  --color-brand-400: #5a8cc6;
+  --color-brand-500: #3a6fae;
+  --color-brand-600: #2a5a96;
+  --color-brand-700: #234b7c;
+  --color-brand-800: #183153;
+  --color-brand-900: #0f2038;
+}
+
+@layer base {
+  body {
+    font-family: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  body.print-single .sheet-wrap:not(.print-target) {
+    display: none !important;
+  }
+  .sheet-wrap {
+    break-after: page;
+  }
+  .sheet-wrap:last-child {
+    break-after: auto;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
